@@ -9,6 +9,7 @@ public class TestScript : MonoBehaviour
     [SerializeField] private KeyCode blinkAction;
     [SerializeField] private KeyCode moveAction;
     [SerializeField] private KeyCode scaleAction;
+    private Rigidbody _rb;
 
     // Start is called before the first frame update
     void Start()
@@ -23,18 +24,18 @@ public class TestScript : MonoBehaviour
         {
             blink();
         }
-        
+
         if (Input.GetKeyDown(scaleAction))
         {
             scale();
         }
-        
+
         if (Input.GetKeyDown(moveAction))
         {
             move();
         }
     }
-    
+
     public void blink()
     {
         _anim.SetTrigger("Blink");
